@@ -14,22 +14,24 @@ const mascota = {
 </script>
 
 <template>
-  <div>
+  <div class="ficha">
 
-    <p>Nombre: {{ mascota.nombre }}</p>
-    <p>Tipo: {{ mascota.tipo }}</p>
-    <p>Edad: {{ mascota.edad }}</p>
-    <p>vacunado: 
+    <p> <strong>Nombre:</strong> {{ mascota.nombre }}</p>
+    <p> <strong>Tipo:</strong>  {{ mascota.tipo }}</p>
+    <p> <strong>Edad:</strong> {{ mascota.edad }}</p>
+    <p> <strong> Vacunado:</strong>
       <span v-if="mascota.vacunado" class="ok"> si vacunado</span>
       <span v-else class="error"> no vacunado</span>
     </p>
-
-    <p
+    <p> <strong> Caracteristicas:</strong> </p>
+    <ul>
+      <li
       v-for="caracteristica in mascota.caracteristicas"
       :key="caracteristica"
-    >
+      >
       {{ caracteristica }}
-    </p>
+    </li>
+    </ul>
   
   
   </div>
@@ -37,10 +39,17 @@ const mascota = {
 
 <style scoped>
 
+.ficha{
+  width: 200px;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 p{
   font-family: sans-serif;
-  font-weight: bold;
-  font-size: 18px
+  font-size: 16px
 }
 
 .ok{
@@ -53,4 +62,9 @@ p{
   color: red
 }
 
+
+
+ul{
+  list-style-position: inside;
+}
 </style>
