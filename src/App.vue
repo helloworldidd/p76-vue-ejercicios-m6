@@ -4,6 +4,9 @@
 import CardList from './components/CardList.vue';
 import NavBar from './components/NavBar.vue';
 import Ficha from './components/Ficha.vue';
+
+import Formulario from './components/Formulario.vue';
+
 import CentroDeEventos from './components/CentroDeEventos.vue';
 import ButtonComponent from './components/ButtonComponent.vue';
 
@@ -32,7 +35,7 @@ const mostrarMensaje = (txt) => {
 
 
   <h2>Práctico 3 (Pendiente)</h2>
-  
+  <Formulario />
   
   
   <h2>Práctico 4</h2>
